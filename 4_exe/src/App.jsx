@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import VideoPlayer from './VideoPlayer/VideoPlayer'
 import ClockContainer from './CLock/ClockContainer'
+import DocumentTitleApp from './DocumentTitleApp/DocumentTitleApp'
 import './App.css'
 
 function App() {
@@ -11,6 +12,8 @@ function App() {
       <VideoPlayer />
       <hr />
       <ClockContainer />
+      <hr />
+      <DocumentTitleApp />
     </>
   );
 }

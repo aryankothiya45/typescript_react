@@ -20,7 +20,7 @@ export default function VideoPlayer() {
             <h2>Video Player</h2>
             <video
                 ref={videoRef}
-                width="420"
+                width="370"
                 controls 
             >
                 <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4" />

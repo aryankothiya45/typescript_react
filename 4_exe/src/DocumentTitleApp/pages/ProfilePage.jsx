@@ -1,0 +1,12 @@
+import useDocumentTitle from "../hooks/useDocumentTitle";
+
+export default function ProfilePage() {
+    useDocumentTitle("Profile Page");
+
+    return(
+        <div>
+            <h1>Profile Page</h1>
+            <p>This is the profile page.</p>
+        </div>
+    );
+}
