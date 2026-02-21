@@ -1,5 +1,5 @@
 import React from 'react';
-import type { Todo } from './TodoList';
+import { JSX } from "react/jsx-runtime";
 
 // export default function TodoItem({ item, onToggle }) {
 //     let start = performance.now();
@@ -15,12 +15,18 @@ import type { Todo } from './TodoList';
 // );
 // }
 
-type TodoItemProps = {
-    item: Todo;
+type TodoBase = {
+    id: number;
+    text: string;
+    completed: boolean;
+}
+
+type TodoItemProps<T extends TodoBase> = {
+    item: T;
     onToggle: (id: number) => void;
 }
 
-const TodoItem = React.memo(({ item, onToggle } : TodoItemProps) => {
+const TodoItem = React.memo(<T extends TodoBase>({ item, onToggle } : TodoItemProps<T>) => {
     let start = performance.now();
     while (performance.now() - start < 5) {
     }
@@ -36,6 +42,6 @@ const TodoItem = React.memo(({ item, onToggle } : TodoItemProps) => {
             {item.text}
         </div>
     );
-});
+})as <T extends TodoBase>(props: TodoItemProps<T>) => JSX.Element;
 
 export default TodoItem;
