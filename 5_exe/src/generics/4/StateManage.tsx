@@ -18,7 +18,7 @@ const StateManage = () => {
     const productState = new StateManager<{ title: string, price: number, stock: number }>
     ({ title: "Book", price: 20, stock: 100 });
 
-    productState.update({ price: 18, stock: 90 });
+    productState.update({ price: 17, stock: 90 });
 
     return (
         <div>
